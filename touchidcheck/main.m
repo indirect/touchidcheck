@@ -14,10 +14,10 @@ int main(int argc, const char * argv[]) {
     NSError *authError = nil;
 
     if ([myContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&authError]) {
-        printf("Found a TouchID sensor!\n");
+        printf("touchid_present=true\n");
         return 0;
     } else {
-        printf("Could not find a TouchID sensor.\n");
+        printf("touchid_present=false\n");
         return 1;
     }
 }
